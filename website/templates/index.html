@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lancelot' rel='stylesheet'>
+    <title>FreindsOfSociety</title>
+    <style>
+        body {
+            background-color: #e4ffc2;
+            margin: 0;
+        }
+        .titlebar {
+            background-color: #2e6417;
+        }
+        .titlebar a {
+            color: white;
+            font-family: 'Lancelot';
+            font-size: x-large;
+            padding-left: 1%;
+            text-decoration: none;
+        }
+        .photodiv {
+            margin-top: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .photodiv div {
+            width: 300px;
+            height: 450px;
+            text-align: center;
+        }
+        .photodiv div h2 {
+            font-family: 'Lancelot';
+        }
+        .photodiv div a {
+            font-family: 'Lancelot';
+            padding: 5px;   
+            border-radius: 20px;
+            background-color: lightcoral;
+            color: black;
+            text-decoration: none;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="titlebar">
+        <a href="{% url 'index' %}">Freinds Of Society</a>
+    </div>
+    <div class="photodiv">
+        <img src="{% static 'img.jfif' %}" width="300px" height="450px">
+        <div>
+            <h2>Want to connect with us!</h2>
+            Ever Found yourself on cross roads of life and everything feels tough we are there to help you, Trust Us. We are just like your home, your fellow beings that are there for you, share your problems with us and we will make sure that we figure things out together!  
+            <br><br><br>
+            <a href="{% url 'fillform' %}" >Need our Help</a>
+        </div>    
+        <img src="{% static 'lonely.jfif' %}" width="300px" height="450px">
+    </div>
+</body>
+</html>

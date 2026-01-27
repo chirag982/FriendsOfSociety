@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lancelot' rel='stylesheet'>
+    <title>FreindsOfSociety</title>
+    <style>
+        body {
+            background-color: #e4ffc2;
+            margin: 0;
+        }
+        .titlebar {
+            background-color: #2e6417;
+        }
+        .titlebar a {
+            color: white;
+            font-family: 'Lancelot';
+            font-size: x-large;
+            padding-left: 1%;
+            text-decoration: none;
+        }
+        .photodiv {
+            margin-top: 1%;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: center;
+            background-color: white;
+            display: block;
+            border-radius: 20px;   
+            padding-bottom: 10px;         
+        }
+        .photodiv h1 {
+            color: white;   
+            font-family: 'Lancelot';
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: black;
+        }
+        .photodiv div {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large ;
+            display: flex;
+            justify-content: space-around;
+        }
+        .photodiv div input, textarea {
+            width: 70%;
+        }
+        .photodiv div textarea {
+            width: 70%;
+            height: 100px;
+        }
+        .photodiv button {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 5px;   
+            border-radius: 20px;
+            background-color: #e4ffc2;
+            color: black;
+            text-decoration: none;
+            font-size: x-large;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="titlebar">
+        <a href="{% url 'index' %}">Freinds Of Society</a>
+    </div>
+    <div class="photodiv">
+        <h1>Connect With Us</h1>
+        <form method="post", action="{% url 'sendMail' %}">
+            {% csrf_token %}
+            <div>
+                <label>Email : </label>
+                <input type="text" name="email">
+            </div>
+            <br><br>
+            <div>
+                <label>Phone No. : </label>
+                <input type="text" name="phone">
+            </div>
+            <br><br>
+            <div>
+                <label>Name : </label>
+                <input type="text" name="name">
+            </div>
+            <br><br>
+            <div>
+                <label>problem : </label>
+                <textarea name="problem"></textarea>
+            </div>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>    
+    </div>
+</body>
+</html>
