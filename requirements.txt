@@ -1,4 +1,5 @@
 Django
 mangum
-dj-databse-url
+dj_databse_url
 psycopg2-binary
+
