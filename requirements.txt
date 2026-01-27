@@ -1,3 +1,4 @@
 Django>=4.2
 mangum
 psycopg2-binary
+dj-databse-url
