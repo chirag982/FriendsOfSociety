@@ -1,5 +1,4 @@
-Django>=4.2
+Django
 mangum
+dj-databse-url
 psycopg2-binary
-dj_databse_url
-
