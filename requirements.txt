@@ -1,6 +1,4 @@
-Django
+Django>=4.2
 mangum
-dj-database-url
 psycopg2-binary
-
-
+dj-database-url
